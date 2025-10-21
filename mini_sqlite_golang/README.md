@@ -250,28 +250,6 @@ type DatabaseEngine struct {
 }
 ```
 
-## ⚡ Performance Comparison
-
-| Metric | Python | **Go** | Rust | Notes |
-|--------|--------|--------|------|-------|
-| 🚀 **Startup** | ~100ms | **~10ms** | ~5ms | Go: near-instant |
-| 📊 **Parse 1000 queries** | ~200ms | **~40ms** | ~20ms | Go: 5x faster |
-| 💾 **Insert 1000 rows** | ~150ms | **~30ms** | ~15ms | Go: 5x faster |
-| 🔍 **Select with index** | ~50ms | **~10ms** | ~5ms | Go: 5x faster |
-| 💿 **Memory footprint** | ~50MB | **~10MB** | ~5MB | Go: efficient GC |
-| 📦 **Binary size** | N/A | **~6MB** | ~2-3MB | Go: standalone |
-| ⏱️ **Build time** | N/A | **~2s** | ~60s | Go: 30x faster! |
-| 📝 **Code lines** | ~620 | **~920** | ~1,650 | Go: sweet spot |
-
-### 🏆 Why Go Wins for This Project
-
-- ⚡ **Fast compilation**: ~2 seconds vs Rust's ~60 seconds
-- 🎯 **Balanced performance**: Fast enough for most use cases
-- 📖 **Readable code**: No lifetimes, ownership complexity
-- 🛠️ **Easy to modify**: Quick iteration and experimentation
-- 📦 **Single binary**: Deploy anywhere, no dependencies
-- 🌐 **Great stdlib**: Excellent http, bufio, regexp packages
-
 ## 🛠️ Development Commands
 
 ```pwsh
@@ -321,13 +299,6 @@ $env:GOOS="windows"; go build    # Windows
 
 ## 📚 Learning Resources
 
-### Understanding the Code
-1. 📖 Start with `main.go` - See flag parsing with Go's `flag` package
-2. 🎯 Read `core/engine.go` - Simple orchestration (25 lines!)
-3. 📝 Study `core/parser.go` - Learn map-based dispatch pattern
-4. 💾 Explore `core/storage/btree.go` - Map-based storage
-5. 🌐 Check `web/server.go` - Go's excellent `http` package
-
 ### Go Concepts Used
 - **Maps & Slices**: Flexible data structures
 - **Interfaces**: `interface{}` for dynamic typing
@@ -351,16 +322,6 @@ $env:GOOS="windows"; go build    # Windows
 3. ✅ Compare with Python/Rust versions
 4. ✅ Build custom queries for your use case
 
-### For Developers
-1. 🎯 Add more SQL features (GROUP BY, ORDER BY, LIMIT)
-2. 💾 Implement disk persistence for B-Tree pages
-3. 🔄 Write LSM log to disk for durability
-4. 🧪 Add comprehensive unit tests with `testing` package
-5. 🚀 Use goroutines for concurrent query execution
-6. 📊 Add query optimization and cost-based planning
-7. 🔒 Implement true ACID transactions
-8. 🌐 Support multiple concurrent connections with channels
-
 ## 🏆 Why Go?
 
 | Advantage | Description |
@@ -373,30 +334,6 @@ $env:GOOS="windows"; go build    # Windows
 | 🧵 **Built-in Concurrency** | Goroutines and channels for easy parallelism |
 | 🛠️ **Great Tooling** | go fmt, go vet, go test - integrated tools |
 | 📖 **Easy to Learn** | Simple syntax, clear documentation |
-
-## 📊 Comparison with Other Versions
-
-### Python Version
-- ✅ Easiest to write (~620 lines)
-- ✅ Most flexible (dynamic typing)
-- ❌ Slowest performance
-- ❌ Requires Python runtime
-
-### Go Version (This) ⭐
-- ✅ **Best balance of simplicity and performance**
-- ✅ **Fast compilation (~2s)**
-- ✅ **Good performance (5-8x Python)**
-- ✅ **Moderate code size (~920 lines)**
-- ✅ **Zero dependencies**
-- ✅ **Single binary deployment**
-- ✅ **Easy to understand and modify**
-
-### Rust Version
-- ✅ Fastest performance (~10x Python)
-- ✅ Memory safety guarantees
-- ❌ Longer code (~1,650 lines)
-- ❌ Slow compilation (~60s)
-- ❌ Steeper learning curve
 
 ## 🎓 Code Quality Highlights
 
@@ -455,19 +392,10 @@ Choose this implementation if you want:
 - 🌐 Great standard library support
 - 🎓 Learning database internals without fighting the language
 
-## 🤝 Contributing
-
-This is an educational project! Feel free to:
-- 🐛 Report bugs or issues
-- 💡 Suggest new features
-- 🔧 Submit pull requests
-- 📖 Improve documentation
-- 🎓 Use for learning
-
 ## 📄 License
 
 Educational/MIT
 
 ---
 
-**Built with 🐹 Go | The pragmatic choice for learning and building**
+**Built with 🐹 Go**

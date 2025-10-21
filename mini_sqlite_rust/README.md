@@ -236,17 +236,6 @@ let engine = Arc::new(Mutex::new(DatabaseEngine::new()));
 // Can be safely shared across threads
 ```
 
-## ⚡ Performance Comparison
-
-| Metric | Python | Rust | Improvement |
-|--------|--------|------|-------------|
-| 🚀 **Startup** | ~100ms | ~5ms | **20x faster** |
-| 📊 **Parse 1000 queries** | ~200ms | ~20ms | **10x faster** |
-| 💾 **Insert 1000 rows** | ~150ms | ~15ms | **10x faster** |
-| 🔍 **Select with index** | ~50ms | ~5ms | **10x faster** |
-| 💿 **Memory footprint** | ~50MB | ~5MB | **10x smaller** |
-| 📦 **Binary size** | N/A | ~2-3MB | **Standalone** |
-
 ## 🛠️ Development Commands
 
 ```pwsh
@@ -285,13 +274,6 @@ cargo build --release --target x86_64-unknown-linux-gnu
 | 🔧 Debug mode slow | Always use `--release` for testing |
 
 ## � Learning Resources
-
-### Understanding the Code
-1. 📖 Start with `src/main.rs` - See CLI argument parsing
-2. 🎯 Read `src/core/engine.rs` - Understand orchestration
-3. 📝 Study `src/core/parser.rs` - Learn enum-based parsing
-4. 💾 Explore `src/core/storage/btree.rs` - Storage internals
-5. 🌐 Check `src/web/server.rs` - TCP server implementation
 
 ### Rust Concepts Used
 - **Enums & Pattern Matching**: Type-safe command representation
@@ -337,29 +319,6 @@ cargo build --release --target x86_64-unknown-linux-gnu
 | 🌐 **Modern** | Pattern matching, traits, generics, zero-cost abstractions |
 | 📚 **Growing Ecosystem** | Active community, great documentation |
 
-## 📊 Comparison with Other Versions
-
-### Python Version
-- ✅ Easiest to write and prototype
-- ✅ Most concise (~620 lines)
-- ❌ Slowest performance
-- ❌ Runtime errors possible
-
-### Rust Version (This)
-- ✅ **Fastest performance (~10x Python)**
-- ✅ **Compile-time safety guarantees**
-- ✅ **Thread-safe by design**
-- ✅ **Production-ready**
-- ❌ Longer code (~1,650 lines)
-- ❌ Slower compilation (~60s first time)
-- ❌ Steeper learning curve
-
-### Go Version
-- ✅ Balanced performance (~5-8x Python)
-- ✅ Fast compilation (~2s)
-- ✅ Moderate code size (~920 lines)
-- ❌ Less memory control than Rust
-
 ## 📝 Exit Commands
 
 Type any of these to exit the CLI:
@@ -367,19 +326,10 @@ Type any of these to exit the CLI:
 - `quit`
 - `:q`
 
-## 🤝 Contributing
-
-This is an educational project! Feel free to:
-- 🐛 Report bugs or issues
-- 💡 Suggest new features
-- 🔧 Submit pull requests
-- 📖 Improve documentation
-- 🎓 Use for learning
-
 ## 📄 License
 
 Educational/MIT
 
 ---
 
-**Built with 🦀 Rust | Ready for production-grade performance with educational clarity**
+**Built with 🦀 Rust**

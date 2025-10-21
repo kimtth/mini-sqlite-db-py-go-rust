@@ -221,18 +221,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         # Simple HTML interface
 ```
 
-## ⚡ Performance Characteristics
-
-| Metric | Value | Notes |
-|--------|-------|-------|
-| 🚀 **Startup** | ~100ms | Fast, interpreted startup |
-| 📊 **Parse 1000 queries** | ~200ms | Regex-based parsing |
-| 💾 **Insert 1000 rows** | ~150ms | Dict operations |
-| 🔍 **Select with index** | ~50ms | Hash lookup |
-| 💿 **Memory footprint** | ~50MB | Includes Python runtime |
-| 📝 **Code lines** | ~620 | Most concise version |
-| 🔧 **Build time** | 0s | No compilation needed! |
-
 ## 🛠️ Development Commands
 
 ```pwsh
@@ -270,13 +258,6 @@ mypy mini_sqlite/
 
 ## 📚 Learning Resources
 
-### Understanding the Code
-1. 📖 Start with `main.py` - See argument parsing with `argparse`
-2. 🎯 Read `core/engine.py` - Simple orchestration (30 lines!)
-3. 📝 Study `core/parser.py` - Learn dict-based dispatch
-4. 💾 Explore `core/storage/btree.py` - Dict-based storage
-5. 🌐 Check `web/server.py` - Python's `http.server` module
-
 ### Python Concepts Used
 - **Dicts & Lists**: Core data structures
 - **Regex**: Pattern matching with `re` module
@@ -298,16 +279,6 @@ mypy mini_sqlite/
 3. ✅ Compare with Rust/Go versions for performance
 4. ✅ Build custom queries for your use case
 
-### For Developers
-1. 🎯 Add more SQL features (GROUP BY, ORDER BY, LIMIT)
-2. 💾 Add journaling/WAL to complement the persisted B-Tree pages
-3. 🔄 Write LSM log to disk for durability
-4. 🧪 Add comprehensive unit tests with `unittest`
-5. 🚀 Use asyncio for concurrent web requests
-6. 📊 Add query optimization and cost-based planning
-7. 🔒 Implement true ACID transactions
-8. 🌐 Support multiple concurrent connections
-
 ## 🏆 Why Python?
 
 | Advantage | Description |
@@ -320,32 +291,6 @@ mypy mini_sqlite/
 | 🌐 **Great for Learning** | Focus on algorithms, not language complexity |
 | 🐍 **Rich Ecosystem** | Easy to add features with pip packages |
 | 💡 **Interactive** | Use REPL to test ideas quickly |
-
-## 📊 Comparison with Other Versions
-
-### Python Version (This) ⭐
-- ✅ **Easiest to write and understand**
-- ✅ **Most concise (~620 lines)**
-- ✅ **Zero dependencies**
-- ✅ **Instant startup, no compilation**
-- ✅ **Perfect for learning**
-- ✅ **Easy to modify and experiment**
-- ❌ Slower performance (~5-10x slower than Go/Rust)
-- ❌ Runtime errors possible
-
-### Go Version
-- ✅ Balanced performance (5-8x faster)
-- ✅ Fast compilation (~2s)
-- ✅ Moderate code size (~920 lines)
-- ❌ More verbose than Python
-- ❌ Static typing requires more planning
-
-### Rust Version
-- ✅ Fastest performance (10x faster)
-- ✅ Memory safety guarantees
-- ❌ Longest code (~1,650 lines)
-- ❌ Slow compilation (~60s)
-- ❌ Steepest learning curve
 
 ## 🎓 Code Quality Highlights
 
@@ -396,40 +341,10 @@ Type any of these to exit the CLI:
 - `quit`
 - `:q`
 
-## 🎯 When to Choose Python
-
-Choose this implementation if you want:
-- 📖 To learn database internals without language complexity
-- ⚡ To prototype and experiment quickly
-- 🎓 A teaching tool for database concepts
-- 🛠️ To modify and extend easily
-- 📦 Zero setup - just run and go
-- 💡 An interactive development experience
-- 🐍 To leverage Python's rich ecosystem for extensions
-
-## 🎓 Educational Value
-
-This implementation is perfect for learning:
-- 📝 **SQL Parsing**: See how regex can tokenize SQL commands
-- 🗄️ **Storage Engines**: Understand B-Trees, indexes, and LSM trees
-- ⚙️ **Query Execution**: Learn how SELECT, JOIN, and WHERE work
-- 💾 **Memory Management**: Simple page allocation simulation
-- 🌐 **Web Servers**: Basic HTTP server implementation
-- 🎯 **Design Patterns**: Dict dispatch, composition, clean architecture
-
-## 🤝 Contributing
-
-This is an educational project! Feel free to:
-- 🐛 Report bugs or issues
-- 💡 Suggest new features
-- 🔧 Submit pull requests
-- 📖 Improve documentation
-- 🎓 Use for learning and teaching
-
 ## 📄 License
 
 Educational/MIT
 
 ---
 
-**Built with 🐍 Python | Perfect for learning database internals**
+**Built with 🐍 Python**
